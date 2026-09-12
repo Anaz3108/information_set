@@ -2,96 +2,70 @@
 
 
 
-# [Project Name] 🎯
+# Information_Collector🎯
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: Useless duo
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: Anjana - Tkm college of engineering
+- Member 2: Anas - Tkm college of engineering
+
 
 ### Project Description
-[2-3 lines about what your project does]
+it collects the information and with a fun twist at the end
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+too much time for people
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+we wasted some time
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
-
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+- html
+- css
 
 ### Implementation
 For Software:
 # Installation
-[commands]
+npm install -g  live-server
+
 
 # Run
-[commands]
+live-server
 
 ### Project Documentation
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![Landing Page](https://drive.google.com/file/d/1Oz0qUjkV_YwJZL8PWcbxV-Q9J1169SSi/view?usp=sharing)
+*initial ui and portal entry*
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![Form page](https://drive.google.com/file/d/1EVNREO2GIMrNGVDrdpEZxgQfY9VdVT4Y/view?usp=sharing)
+*Personal and academic information input screen*
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+![Verification page](https://drive.google.com/file/d/198Jrj0V43bQTay7_13aRPqc6sKaM0HBM/view?usp=sharing)
+*verification complete screen with a plot funny twist*
 
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
-
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+[https://drive.google.com/file/d/1mB682dBDIa1B9VzkWeCh5MU8U7TMMcdr/view?usp=sharing]
+** Landing Page: Initial UI showing the official portal landing screen.
+ * Personal Information Form: Form fields for entering user's basic and academic information.
+ * Verification Successful Page: Completion screen showing the humorously successful verification result and time wasted summary.*
 
 # Additional Demos
-[Add any extra demo materials/links]
+nil
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Anas: implement html and completes readme.md
+- Anjana: finded project idea,git connection and css implementation
+
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
