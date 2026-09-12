@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Verification</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="background-3d">
+    <div class="cube cube1"></div>
+    <div class="cube cube2"></div>
+    <div class="cube cube3"></div>
+</div>
+
+<div class="card verification-card">
+
+    <div class="official-badge">
+        SECURITY VERIFICATION
+    </div>
+
+    <h1>Identity Verification</h1>
+
+    <p class="subtitle">
+        Your information has been received.
+    </p>
+
+    <div class="loader"></div>
+
+    <div id="status">
+        Connecting to secure verification server...
+    </div>
+
+    <div class="verification-list">
+
+        <p>✓ Checking personal information</p>
+
+        <p>✓ Validating registration number</p>
+
+        <p>✓ Checking database records</p>
+
+        <p>⏳ Performing extremely important calculations</p>
+
+    </div>
+
+    <div class="progress big-progress">
+        <div id="verifyProgress"></div>
+    </div>
+
+    <p class="tiny">
+        Please do not close this window.
+    </p>
+
+</div>
+
+<script>
+
+let progress = 0;
+
+const bar = document.getElementById("verifyProgress");
+const status = document.getElementById("status");
+
+const messages = [
+    "Connecting to secure verification server...",
+    "Searching national database...",
+    "Analyzing personal information...",
+    "Cross-checking hobbies...",
+    "Evaluating favorite food...",
+    "Determining life achievements...",
+    "Performing extremely important calculations...",
+    "Verification almost complete..."
+];
+
+let messageIndex = 0;
+
+const interval = setInterval(() => {
+
+    progress += 5;
+
+    bar.style.width = progress + "%";
+
+    if (progress % 15 === 0 && messageIndex < messages.length - 1) {
+        messageIndex++;
+        status.innerText = messages[messageIndex];
+    }
+
+    if (progress >= 100) {
+
+        clearInterval(interval);
+
+        status.innerText =
+            "Verification completed successfully.";
+
+        setTimeout(() => {
+            window.location.href = "final.html";
+        }, 2200);
+    }
+
+}, 450);
+
+</script>
+
+</body>
+</html>

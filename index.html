@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official Citizen Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<div class="background-3d">
+    <div class="cube cube1"></div>
+    <div class="cube cube2"></div>
+    <div class="cube cube3"></div>
+</div>
+
+<div class="card landing-card">
+
+    <div class="official-badge">
+        ★ OFFICIAL PORTAL ★
+    </div>
+
+    <h1>National Personal Information Portal</h1>
+
+    <p class="subtitle">
+        Centralized Personal Profile Registration System
+    </p>
+
+    <div class="notice">
+        <strong>IMPORTANT NOTICE</strong>
+        <p>
+            All citizens are requested to complete their
+            personal information registration before proceeding.
+        </p>
+    </div>
+
+    <div class="fake-info">
+        <div>
+            <span>STATUS</span>
+            <strong>● SYSTEM ONLINE</strong>
+        </div>
+
+        <div>
+            <span>SECURITY</span>
+            <strong>256-BIT ENCRYPTION</strong>
+        </div>
+
+        <div>
+            <span>FORM ID</span>
+            <strong>NPIP-2026</strong>
+        </div>
+    </div>
+
+    <button onclick="startApplication()">
+        BEGIN REGISTRATION →
+    </button>
+
+    <p class="tiny">
+        Estimated completion time: 7–10 minutes
+    </p>
+
+</div>
+
+<script>
+function startApplication() {
+
+    const button = document.querySelector("button");
+
+    button.innerHTML = "INITIALIZING SECURE PORTAL...";
+    button.disabled = true;
+
+    setTimeout(() => {
+        window.location.href = "profile.html";
+    }, 2500);
+}
+</script>
+
+</body>
+</html>

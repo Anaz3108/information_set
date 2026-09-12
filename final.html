@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Application Result</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="background-3d">
+    <div class="cube cube1"></div>
+    <div class="cube cube2"></div>
+    <div class="cube cube3"></div>
+</div>
+
+<div class="card result-card">
+
+    <div class="success-icon">
+        😂
+    </div>
+
+    <h1>VERIFICATION SUCCESSFUL</h1>
+
+    <p class="welcome">
+        Congratulations,
+        <strong id="name">Applicant</strong>!
+    </p>
+
+    <div class="result-message">
+
+        <h2>🎉 YOU DID IT!</h2>
+
+        <p>
+            You have successfully wasted your time.
+        </p>
+
+        <p>
+            You filled out a completely unnecessary form,
+            waited for verification, and survived the process.
+        </p>
+
+        <div class="laugh">
+            HAHAHAHAHAHAHAHAHA 😂
+        </div>
+
+    </div>
+
+    <div class="statistics">
+
+        <div>
+            <strong id="timer">00:00</strong>
+            <span>TIME WASTED</span>
+        </div>
+
+        <div>
+            <strong>100%</strong>
+            <span>POINTLESSNESS</span>
+        </div>
+
+        <div>
+            <strong>∞</strong>
+            <span>REGRET</span>
+        </div>
+
+    </div>
+
+    <button onclick="location.href='index.html'">
+        WASTE MY TIME AGAIN
+    </button>
+
+</div>
+
+<script>
+
+const name = localStorage.getItem("name");
+
+if (name) {
+    document.getElementById("name").innerText = name;
+}
+
+let seconds = 0;
+
+setInterval(() => {
+
+    seconds++;
+
+    const mins = String(Math.floor(seconds / 60)).padStart(2, "0");
+    const secs = String(seconds % 60).padStart(2, "0");
+
+    document.getElementById("timer").innerText =
+        mins + ":" + secs;
+
+}, 1000);
+
+
+/* Laughter */
+
+setTimeout(() => {
+
+    const laugh = new SpeechSynthesisUtterance(
+        "Hahahahahahahaha! You have successfully wasted your time!"
+    );
+
+    laugh.rate = 1.15;
+    laugh.pitch = 1.5;
+    laugh.volume = 1;
+
+    speechSynthesis.speak(laugh);
+
+}, 700);
+
+</script>
+
+</body>
+</html>

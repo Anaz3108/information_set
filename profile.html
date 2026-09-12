@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="background-3d">
+    <div class="cube cube1"></div>
+    <div class="cube cube2"></div>
+    <div class="cube cube3"></div>
+</div>
+
+<div class="card form-card">
+
+    <div class="top-bar">
+        <span>NPIP-2026</span>
+        <span>STEP 1 OF 3</span>
+    </div>
+
+    <h1>Personal Information</h1>
+
+    <p class="subtitle">
+        Please provide accurate information for profile verification.
+    </p>
+
+    <div class="progress">
+        <div style="width:33%"></div>
+    </div>
+
+    <form onsubmit="nextPage(event)">
+
+        <div class="section">
+            <h2>👤 Basic Information</h2>
+
+            <div class="grid">
+
+                <div>
+                    <label>Full Name *</label>
+                    <input id="name" required
+                           placeholder="Enter your full name">
+                </div>
+
+                <div>
+                    <label>Age *</label>
+                    <input type="number" required
+                           placeholder="Your age">
+                </div>
+
+                <div>
+                    <label>Date of Birth *</label>
+                    <input type="date" required>
+                </div>
+
+                <div>
+                    <label>Gender *</label>
+                    <select required>
+                        <option value="">Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                        <option>Prefer not to say</option>
+                    </select>
+                </div>
+
+                <div class="full">
+                    <label>Complete Address *</label>
+                    <textarea required
+                              placeholder="Enter your complete address"></textarea>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section">
+
+            <h2>🎓 Academic Information</h2>
+
+            <div class="grid">
+
+                <div>
+                    <label>Highest Qualification *</label>
+                    <select required>
+                        <option value="">Select</option>
+                        <option>High School</option>
+                        <option>Diploma</option>
+                        <option>Bachelor's Degree</option>
+                        <option>Master's Degree</option>
+                        <option>PhD</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Field of Study</label>
+                    <input placeholder="Engineering, Science, etc.">
+                </div>
+
+                <div>
+                    <label>College / University</label>
+                    <input placeholder="Institution name">
+                </div>
+
+                <div>
+                    <label>Current Occupation</label>
+                    <input placeholder="Student, Engineer, etc.">
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="section">
+
+            <h2>⭐ Personal Information</h2>
+
+            <div class="grid">
+
+                <div>
+                    <label>Hobbies</label>
+                    <input placeholder="Reading, gaming, music...">
+                </div>
+
+                <div>
+                    <label>Favorite Food</label>
+                    <input placeholder="Your favorite food">
+                </div>
+
+                <div>
+                    <label>Favorite Movie</label>
+                    <input placeholder="Movie name">
+                </div>
+
+                <div>
+                    <label>Favorite Color</label>
+                    <input type="color">
+                </div>
+
+            </div>
+
+        </div>
+
+        <button type="submit">
+            SAVE & CONTINUE →
+        </button>
+
+    </form>
+
+</div>
+
+<script>
+
+function nextPage(event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+
+    localStorage.setItem("name", name);
+
+    const button = document.querySelector("button");
+
+    button.innerHTML = "SAVING INFORMATION...";
+
+    button.disabled = true;
+
+    setTimeout(() => {
+
+        button.innerHTML = "VERIFYING DATA...";
+
+        setTimeout(() => {
+            window.location.href = "verification.html";
+        }, 1800);
+
+    }, 1800);
+}
+
+</script>
+
+</body>
+</html>
